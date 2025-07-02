@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 🎨 Calendar Heatmap Style */
+
+.react-calendar-heatmap text {
+  fill: #eee;
+  font-size: 0.65rem;
+}
+
+.color-empty {
+  fill: #2b4440; /* viridian-800 */
+}
+.color-scale-1 {
+  fill: #4e887b; /* viridian-500 */
+}
+.color-scale-2 {
+  fill: #8cbcaf; /* viridian-300 */
+}
+.color-scale-3 {
+  fill: #dcebe6; /* viridian-100 */
+}
+
+.react-calendar-heatmap rect:hover {
+  stroke: #fff;
+  stroke-width: 1;
+  cursor: pointer;
+}
+
