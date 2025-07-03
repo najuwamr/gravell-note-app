@@ -18,7 +18,6 @@ class NoteController extends Controller
         $title = $request->input('title') ?? 'untitled';
         $content = $request->input('content');
 
-        // Simpan ke Google Drive
         $filename = now()->format('Ymd_His') . '_' . Str::slug($title) . '.html';
         Storage::disk('google')->put($filename, $content);
 
