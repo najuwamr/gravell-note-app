@@ -18,16 +18,19 @@ class AuthGoogleController extends Controller
     {
         $googleUser = Socialite::driver('google')->stateless()->user();
 
-        $user = User::firstOrCreate(
+        $user = User::updateOrCreate(
             ['email' => $googleUser->getEmail()],
             [
                 'name' => $googleUser->getName(),
                 'google_id' => $googleUser->getId(),
-                'avatar' => $googleUser->getAvatar(),
             ]
         );
 
-        Auth::login($user);
+        $user->avatar = $googleUser->user['picture'] ?? null;
+        $user->save();
+
+        Auth::login($user->fresh()); 
+
         return redirect()->route('home');
     }
 

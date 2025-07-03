@@ -46,7 +46,7 @@
                 <i data-feather="settings" class="w-5 h-5"></i>
                 <span x-show="!collapsed" class="ml-3 font-poppins text-sm">Settings</span>
             </a>
-            <p x-show="!collapsed" class="text-xs text-viridian-950 text-right font-poppins">©2025 Najuwamr</p>
+            <p x-show="!collapsed" class="text-xs text-viridian-950 text-center font-poppins">©2025 Najuwamr</p>
         </div>
     </div>
 </div>

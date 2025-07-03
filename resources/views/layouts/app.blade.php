@@ -70,5 +70,6 @@
         document.addEventListener('alpine:init', () => feather.replace());
         window.addEventListener('DOMContentLoaded', () => feather.replace());
     </script>
+    @stack('scripts')
 </body>
 </html>

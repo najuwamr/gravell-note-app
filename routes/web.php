@@ -28,5 +28,6 @@ Route::middleware('auth')->group(function () {
     });
     Route::prefix('notes')->group(function () {
         Route::get('/create', [NoteController::class, 'create'])->name('notes.create');
+        Route::post('/store', [NoteController::class, 'store'])->name('notes.store');
     });
 });
